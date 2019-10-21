@@ -1,0 +1,32 @@
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.AssemblyInfo.cs
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Logic.deps.json
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Logic.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Logic.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Dal.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Exceptions.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Dal.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Exceptions.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.csproj.CopyComplete
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\LogicNew\obj\Debug\netcoreapp2.2\Logic.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Logic.deps.json
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Logic.dll
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Logic.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Dal.dll
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Exceptions.dll
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Dal.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Exceptions.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.dll
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.pdb

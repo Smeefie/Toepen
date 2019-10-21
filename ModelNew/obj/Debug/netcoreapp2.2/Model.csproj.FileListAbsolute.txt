@@ -1,0 +1,18 @@
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\ModelNew\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\ModelNew\obj\Debug\netcoreapp2.2\Model.pdb

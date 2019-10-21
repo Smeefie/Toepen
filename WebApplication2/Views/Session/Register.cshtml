@@ -1,0 +1,33 @@
+﻿@model ASPToep.Models.RegisterViewModel
+@{ViewData["Title"] = "Register"; }
+
+<body style="padding: 0px;">
+    <partial name="Razorpages/LoginHeader" />
+
+    <div class="form">
+        <div class="thumbnail"><img src="~/images/Logo.png" /></div>
+
+        <form asp-action="Register" class="login-form">
+            <input asp-for="Username" placeholder="username" />
+            <input asp-for="Firstname" placeholder="first name" />
+            <input asp-for="Lastname" placeholder="last name" />
+            <input asp-for="Password" placeholder="password" />
+            <input asp-for="ConfirmPassword" placeholder="confirm password" />
+            <input asp-for="Email" placeholder="email address" />
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <button>create</button>
+            <p class="message">Already registered? <a data-href="Login">Sign In</a></p>
+        </form>
+    </div>
+
+    @section Scripts{
+        <script src="~/js/Login.js"></script>
+    }
+
+    @section Stylesheets{
+        <link rel="stylesheet" href="~/css/Login.css" />
+    }
+
+</body>

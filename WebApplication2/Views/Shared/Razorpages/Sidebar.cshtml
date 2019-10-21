@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Sidebar";
+}
+<body>
+    <!--  SIDEBAR MENU  -->
+    <nav class="sidebarMenu" tabindex="0">
+        <div class="smartphone-menu-trigger"></div>
+        <header class="avatar">
+            <img src="Images/logo.png" />
+            <h2>Welcome</h2>
+            <h1>@Model.Username</h1>
+        </header>
+        <ul>
+            <li tabindex="0" data-href="" class="icon-user" id="active"> <span>Profile</span></li>
+            <hr />                        
+            <li tabindex="0" data-href="" class="icon-toepen"> <span>Toepen</span></li>
+            <li tabindex="0" data-href="" class="icon-host"> <span>Host Online</span></li>
+            <li tabindex="0" data-href="" class="icon-stats"> <span>Statistics</span></li>
+            <hr />                        
+            <li tabindex="0" data-href="" class="icon-settings"> <span>Settings</span></li>
+            <li tabindex="0" data-href="logout" class="icon-logout"> <span>Logout</span></li>
+        </ul>
+    </nav>
+</body>

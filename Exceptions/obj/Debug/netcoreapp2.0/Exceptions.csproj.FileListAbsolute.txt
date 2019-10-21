@@ -1,0 +1,12 @@
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\bin\Debug\netcoreapp2.0\Exceptions.deps.json
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\bin\Debug\netcoreapp2.0\Exceptions.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\bin\Debug\netcoreapp2.0\Exceptions.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\bin\Debug\netcoreapp2.0\Model.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\bin\Debug\netcoreapp2.0\Model.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.AssemblyInfo.cs
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.csproj.CopyComplete
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\Exceptions\obj\Debug\netcoreapp2.0\Exceptions.pdb

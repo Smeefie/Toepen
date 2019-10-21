@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ASPToep.Models.ProfileViewModel;
+
+<html>
+
+<body>
+    <partial name="Razorpages/Sidebar" />
+
+    <main>
+        <!--  MAIN PROFILE INFORMATION  -->
+        <div class="Container profileContainer">
+            <div class="profilePicture">
+                <img src="Images/PFPlaceholder.png" />
+            </div>
+            <div class="profileName">
+                @Model.Username
+            </div>
+
+            <!--  UPDATE USER TOGGLE  -->
+            @if (Html.ViewContext.ModelState.Values.SelectMany(m => m.Errors).Count() > 0)
+            {
+                <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+                        $('.message').animate({ height: "toggle", opacity: "toggle" }, "slow");
+                        $('.profileInformation').animate({ height: "toggle", opacity: "toggle" }, "slow");
+                    });
+                </script>
+            }
+
+            <!--  PROFILE INFORMATION  -->
+            <div class="profileInformation">
+                <span class="profileHeader">General Information<br /><br /></span>
+                <ul>
+                    <li>Full Name: @Model.Firstname @Model.Lastname</li>
+                    <li>Email: @Model.Email</li>
+                </ul>
+            </div>
+
+            <!--  UPDATE USER FORM  -->
+            <div class="form">
+                <form asp-action="Profile" class="profile-form">
+                    <input asp-for="Username" placeholder="username" />
+                    <input asp-for="Firstname" placeholder="first name" />
+                    <input asp-for="Lastname" placeholder="last name" />
+
+                    <span>Confirm Password to save</span>
+                    <input asp-for="Password" placeholder="password *" />
+
+                    <div asp-validation-summary="ModelOnly"></div>
+
+                    <button>Confirm</button>
+                </form>
+            </div>
+
+            <!--  EDIT/CLOSE BUTTONS  -->
+            <p class="message"><button href="#">Edit</button></p>
+            <p class="message" style="display:none;"><button href="#">Close</button></p>
+        </div>
+    </main>
+</body>
+
+</html>
+
+@section Stylesheets{
+    <link rel="stylesheet" href="~/css/Main.css" />
+    <link rel="stylesheet" href="~/css/Profile.css" />
+    <link rel="stylesheet" href="~/css/Sidebar.css" />
+}
+
+@section scripts{
+    <script src="~/js/Sidebar.js"></script>
+    <script src="~/js/Profile.js"></script>
+}

@@ -1,0 +1,24 @@
+C:\Users\Stefa\source\repos\WebApplication2\IDal\bin\Debug\netstandard2.0\IDal.deps.json
+C:\Users\Stefa\source\repos\WebApplication2\IDal\bin\Debug\netstandard2.0\IDal.dll
+C:\Users\Stefa\source\repos\WebApplication2\IDal\bin\Debug\netstandard2.0\IDal.pdb
+C:\Users\Stefa\source\repos\WebApplication2\IDal\bin\Debug\netstandard2.0\Model.dll
+C:\Users\Stefa\source\repos\WebApplication2\IDal\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.csprojAssemblyReference.cache
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.csproj.CoreCompileInputs.cache
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.AssemblyInfoInputs.cache
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.AssemblyInfo.cs
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.csproj.CopyComplete
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.dll
+C:\Users\Stefa\source\repos\WebApplication2\IDal\obj\Debug\netstandard2.0\IDal.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\bin\Debug\netstandard2.0\IDal.deps.json
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\bin\Debug\netstandard2.0\IDal.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\bin\Debug\netstandard2.0\IDal.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\bin\Debug\netstandard2.0\Model.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\bin\Debug\netstandard2.0\Model.pdb
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.AssemblyInfo.cs
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.csproj.CopyComplete
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.dll
+C:\Users\Gebruiker\Downloads\Documents\FHICT\S2 - Individueel\VS\LoginASP\IDal\obj\Debug\netstandard2.0\IDal.pdb

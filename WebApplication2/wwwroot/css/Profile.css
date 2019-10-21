@@ -1,0 +1,340 @@
+﻿/* ===================================================================================== */
+
+/* MAIN PROFILE CONTAINER */
+
+  .profileContainer {
+    max-width: 600px;
+    height: auto;
+    min-height: 400px;
+  }
+
+
+.profileContainer img {
+    display: block;
+    width: 100%;
+}
+
+.profilePicture {
+    background: #333;
+    width: 150px;
+    height: 150px;
+    margin: 0 25px;
+    padding: 30px 30px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    box-sizing: border-box;
+}
+
+.profileName {
+    position: absolute;
+    top: 85px;
+    left: 250px;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.profileInformation {
+    position: absolute;
+    padding: 5px;
+    margin: 25px 20px;
+    text-align: left;
+}
+
+    .profileInformation ul {
+        padding: 0 15px;
+        font-size: 1.3em;
+    }
+
+    .profileInformation li {
+        padding: 3px 0;
+    }
+
+.profileHeader {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.infoContainer {
+    max-width: 600px;
+    height: 250px;
+}
+
+.profileContainer button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    outline: 0;
+    background: #333;
+    border: 0;
+    padding: 10px 35px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: .2s;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+}
+
+    .profileContainer button:hover {
+        background: #555;
+        transition: .2s;
+    }
+
+/* ===================================================================================== */
+/* EDIT FORM */
+
+.form {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    width: 350px;
+    padding: 30px;
+    border-radius: 1px;
+    text-align: center;
+    color: #524d43;
+}
+
+
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    position:relative;
+    outline: 0;
+    background: #333;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: .2s;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    right: 0;
+    bottom: 0;
+}
+
+.form button:hover {
+    background: #555;
+    transition: .2s;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    position: relative;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message button {
+    color: #555;
+    text-decoration: none;
+    outline: 0;
+    background: #333;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: .2s;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.form .message button:hover {
+    cursor: pointer;
+    background: #555;
+    transition: .2s;
+}
+
+.form .profile-form {
+    display: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container .info {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+.container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+.container .info span a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container .info span .fa {
+    color: #EF3B3A;
+}
+
+.form span {
+    padding-bottom: 15px;
+    float: left;
+}
+
+/* ===================================================================================== */
+
+/* MID SIZE SCREEN */
+
+@media screen and (max-width: 900px) and (min-width: 400px) {
+    .profileContainer {
+        margin: 50px 30px;
+    }
+}
+
+/* ===================================================================================== */
+
+/* MEDIUM SCREEN SIZES */
+
+@media screen and (max-width: 700px) and (min-width: 400px) {
+    .profilePicture {
+        width: 125px;
+        height: 125px;
+    }
+
+    .profileName {
+        left: 200px;
+        top: 75px;
+    }
+
+    .profileInformation ul {
+        font-size: 1.1em;
+    }
+
+    .profileHeader {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 580px) and (min-width: 400px) {
+    .profilePicture {
+        width: 125px;
+        height: 125px;
+        margin: 0 auto;
+    }
+
+    .profileName {
+        margin: 10px auto;
+        width: 200px;
+        position: initial;
+    }
+
+    .profileInformation {
+        margin: 10px 10px;
+    }
+
+        .profileInformation ul {
+            padding-bottom: 15px;
+        }
+
+        .profileInformation ul {
+            font-size: 1.1em;
+        }
+
+    .profileHeader {
+        font-size: 1.3em;
+    }
+
+    .profileContainer {
+        padding: 12px 8px;
+        height: 500px;
+        margin: 50px 20px;
+    }
+}
+
+/* ===================================================================================== */
+
+/* SMALLEST SIZE SCREEN */
+
+@media screen and (max-width: 400px) {
+    .profilePicture {
+        width: 125px;
+        height: 125px;
+        margin: 0 auto;
+    }
+
+    .profileName {
+        margin: 10px auto;
+        width: 200px;
+        position: initial;
+    }
+
+    .profileInformation ul {
+        padding-bottom: 15px;
+    }
+
+    .profileInformation ul {
+        font-size: 1.1em;
+    }
+
+    .profileHeader {
+        font-size: 1.3em;
+    }
+
+    .profileInformation {
+        margin: 12px 8px;
+    }
+
+    .profileContainer {
+        padding: 10px 10px;
+        height: 500px;
+        margin: 50px 20px;
+    }
+}
