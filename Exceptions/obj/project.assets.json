@@ -692,8 +692,8 @@
     },
     "Model/1.0.0": {
       "type": "project",
-      "path": "../ModelNew/Model.csproj",
-      "msbuildProject": "../ModelNew/Model.csproj"
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -732,8 +732,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj"
+            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj"
             }
           }
         }

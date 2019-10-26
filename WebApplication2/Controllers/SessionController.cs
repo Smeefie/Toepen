@@ -34,28 +34,32 @@ namespace ASPToep.Controllers
         {
             //CHECK THE LOGIN CREDENTIALS
             User user = new User(userVM.Username, userVM.Password);
-
-            if (userLogic.ValidateLogin(user))
+            try
             {
-                //CREATE CLAIMS
-                var claims = new List<Claim>
-                {
-                    new Claim("id", user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim("Role", user.Role.ToString())
-                };
-
-                var claimsIdentity = new ClaimsIdentity(
-                    claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(claimsIdentity), new AuthenticationProperties { });
-
-                return RedirectToAction(actionName: "Profile", controllerName: "User");
+                userLogic.ValidateLogin(user);
             }
-            ModelState.AddModelError("", "Incorrect Login");
-            return View(userVM);
+            catch(ValidateException e)
+            {
+                ModelState.AddModelError("", e.Message);
+                return View(userVM);
+            }
+
+           //CREATE CLAIMS
+           var claims = new List<Claim>
+           {
+               new Claim("id", user.Id.ToString()),
+               new Claim(ClaimTypes.Name, user.Username),
+               new Claim("Role", user.Role.ToString())
+           };
+
+           var claimsIdentity = new ClaimsIdentity(
+               claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+           await HttpContext.SignInAsync(
+               CookieAuthenticationDefaults.AuthenticationScheme,
+               new ClaimsPrincipal(claimsIdentity), new AuthenticationProperties { });
+
+           return RedirectToAction(actionName: "Profile", controllerName: "User");            
         }
 
         [HttpGet]

@@ -4725,6 +4725,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Exceptions": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -4752,7 +4753,8 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Dal": "1.0.0",
-          "Exceptions": "1.0.0"
+          "Exceptions": "1.0.0",
+          "Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Logic.dll": {}
@@ -13029,8 +13031,8 @@
     },
     "Model/1.0.0": {
       "type": "project",
-      "path": "../ModelNew/Model.csproj",
-      "msbuildProject": "../ModelNew/Model.csproj"
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13041,8 +13043,7 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
-      "Model >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
     ]
   },
   "packageFolders": {
@@ -13083,9 +13084,6 @@
             },
             "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\LogicNew\\Logic.csproj": {
               "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\LogicNew\\Logic.csproj"
-            },
-            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj"
             }
           }
         }

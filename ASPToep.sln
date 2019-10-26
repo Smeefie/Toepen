@@ -5,13 +5,16 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPToep", "WebApplication2\ASPToep.csproj", "{53FDC23D-29B6-4FFA-8FD1-C8E6BB37EF8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{B71C347F-CCA0-4BBA-8283-A9876B19A476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "Exceptions\Exceptions.csproj", "{B71C347F-CCA0-4BBA-8283-A9876B19A476}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "DalNew\Dal.csproj", "{F3B1C2FE-61D3-44BB-AA1A-32B75B296E0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dal", "DalNew\Dal.csproj", "{F3B1C2FE-61D3-44BB-AA1A-32B75B296E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "LogicNew\Logic.csproj", "{C36B068A-1C1E-43C1-80AA-A3228689E37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "LogicNew\Logic.csproj", "{C36B068A-1C1E-43C1-80AA-A3228689E37D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F89201E8-6551-40A2-9E85-09E781E8D886} = {F89201E8-6551-40A2-9E85-09E781E8D886}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "ModelNew\Model.csproj", "{0D292C0B-C7E5-4D49-9DAF-CAE5A3D99869}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F89201E8-6551-40A2-9E85-09E781E8D886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +38,10 @@ Global
 		{C36B068A-1C1E-43C1-80AA-A3228689E37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36B068A-1C1E-43C1-80AA-A3228689E37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36B068A-1C1E-43C1-80AA-A3228689E37D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D292C0B-C7E5-4D49-9DAF-CAE5A3D99869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D292C0B-C7E5-4D49-9DAF-CAE5A3D99869}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D292C0B-C7E5-4D49-9DAF-CAE5A3D99869}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D292C0B-C7E5-4D49-9DAF-CAE5A3D99869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89201E8-6551-40A2-9E85-09E781E8D886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89201E8-6551-40A2-9E85-09E781E8D886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89201E8-6551-40A2-9E85-09E781E8D886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89201E8-6551-40A2-9E85-09E781E8D886}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

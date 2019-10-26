@@ -208,6 +208,19 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Exceptions.dll": {}
+        }
+      },
       "Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -690,14 +703,20 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../Exceptions/Exceptions.csproj",
+      "msbuildProject": "../Exceptions/Exceptions.csproj"
+    },
     "Model/1.0.0": {
       "type": "project",
-      "path": "../ModelNew/Model.csproj",
-      "msbuildProject": "../ModelNew/Model.csproj"
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Exceptions >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Model >= 1.0.0"
     ]
@@ -732,8 +751,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj": {
-              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\ModelNew\\Model.csproj"
+            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Exceptions\\Exceptions.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Exceptions\\Exceptions.csproj"
+            },
+            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj"
             }
           }
         }

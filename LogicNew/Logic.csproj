@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DalNew\Dal.csproj" />
     <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
 </Project>

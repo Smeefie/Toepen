@@ -212,6 +212,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Exceptions": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -728,15 +729,16 @@
     },
     "Model/1.0.0": {
       "type": "project",
-      "path": "../ModelNew/Model.csproj",
-      "msbuildProject": "../ModelNew/Model.csproj"
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Dal >= 1.0.0",
       "Exceptions >= 1.0.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -774,6 +776,9 @@
             },
             "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Exceptions\\Exceptions.csproj": {
               "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Exceptions\\Exceptions.csproj"
+            },
+            "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model\\Model.csproj"
             }
           }
         }

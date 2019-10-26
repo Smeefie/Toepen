@@ -7,7 +7,7 @@ namespace Logic.Interfaces
 {
     public interface ISession
     {
-        bool ValidateLogin(User user);       
+        void ValidateLogin(User user);       
 
         void Register(User user);
 

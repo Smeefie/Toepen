@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v2.2": {
       "Dal/1.0.0": {
         "dependencies": {
+          "Exceptions": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
           "Dal.dll": {}
+        }
+      },
+      "Exceptions/1.0.0": {
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "runtime": {
+          "Exceptions.dll": {}
         }
       },
       "Model/1.0.0": {
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "Dal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Exceptions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,8 @@
+C:\Users\Gebruiker\source\repos\ASPToep\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+C:\Users\Gebruiker\source\repos\ASPToep\Model\bin\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\Model\bin\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.pdb

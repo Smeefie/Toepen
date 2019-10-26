@@ -30,8 +30,7 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
-          "Model": "1.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
         },
         "runtime": {
           "ASPToep.dll": {}
@@ -348,6 +347,7 @@
       },
       "Dal/1.0.0": {
         "dependencies": {
+          "Exceptions": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
@@ -371,7 +371,8 @@
       "Logic/1.0.0": {
         "dependencies": {
           "Dal": "1.0.0",
-          "Exceptions": "1.0.0"
+          "Exceptions": "1.0.0",
+          "Model": "1.0.0"
         },
         "runtime": {
           "Logic.dll": {}

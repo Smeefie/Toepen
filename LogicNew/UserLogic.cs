@@ -1,11 +1,11 @@
 ﻿using Logic.Interfaces;
-using Model;
 using Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Dal;
 using Dal.SQL;
+using Model;
 
 namespace Logic
 {
@@ -39,11 +39,13 @@ namespace Logic
         }
 
         //VALIDATE USER LOGIN CREDENTIALS - ISession, IUser
-        public bool ValidateLogin(User loginUser)
+        /// <exception cref="ValidateException"></exception>
+        public void ValidateLogin(User loginUser)
         {
             bool valid = Context.ValidateLogin(loginUser);
-            loginUser.UpdateId(valid ? Context.GetUserByName(loginUser.Username).Id : -1);
-            return Context.ValidateLogin(loginUser);
+            if (!valid) throw new ValidateException("Invalid login");
+
+            loginUser.UpdateId(Context.GetUserByName(loginUser.Username).Id);
         }
         #endregion
 
@@ -85,7 +87,7 @@ namespace Logic
             return Context.CheckUsernameExists(excludeId, username);
         }
 
-        public Error ValidateUpdate(User user, string username, string password)
+        public void ValidateUpdate(User user, string username, string password)
         {
             //CHECK IF THE PASSWORD IS CORRECT
             Error error = new Error();
@@ -96,7 +98,7 @@ namespace Logic
             if (Context.CheckUsernameExists(user.Id, username))
                 error.AddErrorMessage("Username", "Username is already taken");
 
-            return error;
+            if (error.errorKey.Count > 0) throw new UpdateUserException("Unable to update user", error);
         }
 
         //UPDATE THE USER

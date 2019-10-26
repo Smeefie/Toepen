@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ASPToep.Models;
+using Exceptions;
 using Logic;
 using Logic.Interfaces;
 using Microsoft.AspNetCore.Authentication;
@@ -17,8 +18,8 @@ namespace ASPToep.Controllers
     [Authorize]
     public class UserController : Controller
     {
+        //LOAD THE PAGE
         private IUser userLogic = new UserLogic(false);
-
         public IActionResult Profile()
         {
             //INITIALIZE THE VIEWMODEL 
@@ -35,33 +36,33 @@ namespace ASPToep.Controllers
             return View(tempUserVM);
         }
 
+        //UPDATE THE USER
         [HttpPost]
         public IActionResult Profile(ProfileViewModel user)
         {
             User currentUser = userLogic.GetUserByName(HttpContext.User.Identity.Name);
-            Error errorObject = userLogic.ValidateUpdate(currentUser, user.Username, user.Password);
-
-            //IF THERE ARE NO ERRORS, UPDATE THE USER
-            if (errorObject.GetErrorState() == 0)
+            try
             {
-                //CONVERT VIEWMODEL TO MODEL
-                User newUser = new User();
-                newUser.UpdateUserInfo(user.Username, user.Firstname, user.Lastname);
-
-                userLogic.UpdateUser(currentUser.Id, newUser);
-                return View(user);
+                userLogic.ValidateUpdate(currentUser, user.Username, user.Password);
             }
-            else
+            catch (UpdateUserException e)
             {
-                //CREATE ALL THE ERROR MESSAGES
-                for (int i = 0; i < errorObject.errorKey.Count; i++)
-                    ModelState.AddModelError(errorObject.errorKey[i], errorObject.errorMessage[i]);
+                //CREATE ALL THE ERROR MESSAGES   
+                for (int i = 0; i < e.ErrorObject.errorKey.Count; i++)
+                    ModelState.AddModelError(e.ErrorObject.errorKey[i], e.ErrorObject.errorMessage[i]);
                 foreach (var error in ModelState.Values.SelectMany(m => m.Errors))
                 {
                     ModelState.AddModelError("", error.ErrorMessage);
                 }
                 return View(user);
             }
+
+            //CONVERT VIEWMODEL TO MODEL
+            User newUser = new User();
+            newUser.UpdateUserInfo(user.Username, user.Firstname, user.Lastname);
+
+            userLogic.UpdateUser(currentUser.Id, newUser);
+            return View(user);
         }
     }
 }

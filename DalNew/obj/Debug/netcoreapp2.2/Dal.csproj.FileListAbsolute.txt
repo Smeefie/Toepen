@@ -22,3 +22,5 @@ C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.Assem
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.csproj.CopyComplete
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.dll
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Exceptions.dll
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Exceptions.pdb

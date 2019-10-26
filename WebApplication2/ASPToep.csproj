@@ -22,7 +22,6 @@
     <ProjectReference Include="..\DalNew\Dal.csproj" />
     <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
     <ProjectReference Include="..\LogicNew\Logic.csproj" />
-    <ProjectReference Include="..\ModelNew\Model.csproj" />
   </ItemGroup>
 
 </Project>
