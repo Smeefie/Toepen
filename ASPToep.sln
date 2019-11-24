@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPToep", "WebApplication2\ASPToep.csproj", "{53FDC23D-29B6-4FFA-8FD1-C8E6BB37EF8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F89201E8-6551-40A2-9E85-09E781E8D886} = {F89201E8-6551-40A2-9E85-09E781E8D886}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "Exceptions\Exceptions.csproj", "{B71C347F-CCA0-4BBA-8283-A9876B19A476}"
 EndProject
@@ -14,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "LogicNew\Logic.csp
 		{F89201E8-6551-40A2-9E85-09E781E8D886} = {F89201E8-6551-40A2-9E85-09E781E8D886}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F89201E8-6551-40A2-9E85-09E781E8D886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{F89201E8-6551-40A2-9E85-09E781E8D886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,92 @@
+﻿@model ASPToep.Models.GameViewModel
+
+<body>
+    <partial name="Razorpages/Sidebar" />
+    <main>
+        <!--   MAIN PREFERENCES INFORMATION   -->
+        <div class="Container gameContainer addPlayerContainer">
+            <div class="addPlayersSub">
+                <h1> Add Players </h1><br /><br />
+                <div class="dropdown">
+                    <div class="select">
+                        <span id="playerSelect">Select Players</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="player">
+                    <ul class="dropdown-menu">
+                        <li id="1">Player 1</li>
+                        <li id="2">Player 2</li>
+                        <li id="3">Player 3</li>
+                        <li id="4">Player 4</li>
+                        <li id="5">Player 5</li>
+                    </ul>
+                </div>
+
+                <button class="addPlayerButton" onclick="AddPlayerToList()">Add Player</button>
+                <button class="startGameButton" onclick="SendList()">Start Game</button>
+
+                <ul id="playerListId" class="playerListUl"></ul>
+            </div>
+        </div>
+
+        <script>
+            //Add Player to List
+            function AddPlayerToList() {
+                var span = $("span#playerSelect")
+                var text = span.text();
+                var liTag = document.getElementsByTagName("li");
+                var id = 'undefined';
+
+                for (var i = 0; i < liTag.length; i++) {
+                    if (liTag[i].textContent == text) {
+                        id = liTag[i].id;
+                        span.text('Select Players');
+                        liTag[i].remove();
+                        break;
+                    }
+                }
+
+                if (id != 'undefined') {
+                    var li = document.createElement("li");
+                    li.id = id;
+                    li.innerHTML = text;
+
+                    var ul = document.getElementById('playerListId');
+                    ul.appendChild(li);
+                }
+            }
+
+            function SendList() {
+                var dataStream = '';
+                var liTag = document.getElementsByTagName("li");
+                for (var i = 0; i < liTag.length; i++) {
+                    if (liTag[i].parentNode.id == 'playerListId') {
+                        dataStream += liTag[i].id + ";";
+                    }
+                }
+
+                $.ajax({
+                    url: '/Game/StartGame',
+                    data: {
+                        'dataStream': dataStream
+                    },
+                    type: "POST",
+                    succes: function () {
+                        alert('Added');
+                    }
+                });
+            }
+        </script>
+    </main>
+</body>
+
+@section Stylesheets{
+    <link rel="stylesheet" href="~/css/Game.css" />
+    <link rel="stylesheet" href="~/css/fonts/font-awesome.css" />
+}
+@section Scripts{
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="~/js/Game.js"></script>
+    <script src="~/js/Dropdown.js"></script>
+    <script src="~/js/Sidebar.js"></script>
+}

@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model ASPToep.Models.ProfileViewModel;
+@model ASPToep.Models.ProfileViewModel
 
 <html>
 
@@ -43,12 +43,12 @@
             <!--  UPDATE USER FORM  -->
             <div class="form">
                 <form asp-action="Profile" class="profile-form">
-                    <input asp-for="Username" placeholder="username" />
+                    <input asp-for="Username" placeholder="Username" />
                     <input asp-for="Firstname" placeholder="first name" />
-                    <input asp-for="Lastname" placeholder="last name" />
+                    <input asp-for="Lastname" placeholder="Last name" />
 
                     <span>Confirm Password to save</span>
-                    <input asp-for="Password" placeholder="password *" />
+                    <input asp-for="Password" placeholder="Password *" />
 
                     <div asp-validation-summary="ModelOnly"></div>
 

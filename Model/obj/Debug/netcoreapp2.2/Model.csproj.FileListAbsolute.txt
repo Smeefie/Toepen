@@ -6,3 +6,4 @@ C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.Asse
 C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.dll
 C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache

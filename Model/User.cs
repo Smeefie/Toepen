@@ -2,6 +2,7 @@
 
 namespace Model
 {
+
     public class User
     {
         public int Id { get; private set; }
@@ -36,8 +37,9 @@ namespace Model
 
         public User()
         {
-
+            
         }
+
 
         #region UPDATES
         public void UpdateId(int id)

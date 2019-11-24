@@ -1,0 +1,233 @@
+﻿/* ===================================================================================== */
+
+/* PREFERENCES CONTAINER */
+
+.gameContainer {
+    text-align: left;
+    padding: 50px;
+}
+
+    .gameContainer table {
+        border: none;
+        margin: 0px 20px;
+        font-size: 1.3em;
+    }
+
+    .gameContainer td {
+        padding: 8px 50px 4px 0;
+    }
+
+.managementContainer {
+    height: 240px;
+}
+
+.gameSelection li {
+    width: 100%;
+}
+
+.selectionContainer {
+    height: auto;
+    min-width: 90%;
+    text-align: justify;
+}
+
+    .selectionContainer button, .saveGameButton, .addPlayerButton, .startGameButton{
+        outline: 0;
+        text-decoration: none;
+        background: #333;
+        border: 0;
+        padding: 10px 35px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+        transition: .2s;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 700;
+    }
+
+.addPlayerContainer{
+    text-align: center;
+}
+
+.addPlayerButton, .startGameButton {
+
+    display: block;
+    margin: 25px auto;
+    width: 300px;
+}
+
+.savePlayerButton {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+}
+
+.selectionContainer select {
+    margin: 0px 15px;
+    border: none;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.selectionContainer button:hover, .savePrefButton:hover, .addPlayerButton:hover, .startGameButton:hover{
+    background: #555;
+    transition: .2s;
+}
+
+.PlayerName {
+    padding: 0px 15px 0px 25px;
+    font-weight: bold;
+}
+
+.PlayerPoints {
+    float: right;
+    font-weight: 5em;
+    padding: 0px 30px 0px 15px;
+}
+
+.PlayerId {
+    padding: 0px 25px 0px 5px;
+}
+
+.selectionContainer button, .playerDeleteButton, .playerWonButton, .playerKnockButton{
+    float: right;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+
+/* dropdown */
+
+.dropdown {
+    width: 200px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    color: #333;
+    height: 100%;
+    text-align: left
+}
+
+.addPlayerContainer .dropdown{
+    width: 300px;
+}
+
+    .dropdown .select {
+        cursor: pointer;
+        display: block;
+        padding: 10px
+    }
+
+        .dropdown .select > i {
+            font-size: 13px;
+            color: #333;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            float: right;
+            line-height: 20px
+        }
+
+    .dropdown:hover {
+        box-shadow: 0 0 4px rgb(204, 204, 204)
+    }
+
+    .dropdown.active {
+        background-color: #333;
+        color: white;
+    }
+
+    .dropdown.active:hover{
+        box-shadow: 0 0 4px rgb(204, 204, 204);
+        border-radius: 0;
+        background-color: #333;
+        color:white;
+    }
+
+        .dropdown.active .select > i {
+            transform: rotate(-90deg);
+            color: white;
+        }
+
+    .dropdown .dropdown-menu {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        margin-top: 1px;
+        box-shadow: 0 1px 2px rgb(204, 204, 204);
+        border-radius: 0;
+        overflow: hidden;
+        display: none;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 9;
+    }
+
+        .dropdown .dropdown-menu li {
+            padding: 10px;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            color: #333;
+        }
+
+    .dropdown .dropdown-menu {
+        padding: 0;
+        list-style: none;
+    }
+
+        .dropdown .dropdown-menu li:hover {
+            background-color: #333;
+            color:white
+        }
+
+        .dropdown .dropdown-menu li:active {
+            background-color: #333;
+            color: white;
+        }
+
+/* ===================================================================================== */
+
+/* MID SIZE SCREEN */
+
+@media screen and (max-width: 900px) and (min-width: 400px) {
+    .gameContainer {
+        margin: 50px 30px;
+    }
+}
+
+/* ===================================================================================== */
+
+/* MEDIUM SCREEN SIZES */
+
+@media screen and (max-width: 700px) and (min-width: 400px) {
+    .gameContainer {
+        margin: 50px 20px;
+    }
+}
+
+@media screen and (max-width: 580px) and (min-width: 400px) {
+}
+
+/* ===================================================================================== */
+
+/* SMALLEST SIZE SCREEN */
+
+@media screen and (max-width: 400px) {
+    .gameContainer {
+        margin: 50px 20px;
+    }
+}

@@ -6,6 +6,7 @@ using System.Text;
 using Dal;
 using Dal.SQL;
 using Model;
+using Dal.Factory;
 
 namespace Logic
 {
@@ -21,7 +22,7 @@ namespace Logic
             }
             else
             {
-                Context = new UserMemoryContext();
+                Context = Factory.GetUserDal();
             }
         }
 
