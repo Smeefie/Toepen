@@ -1,0 +1,74 @@
+﻿
+@model ASPToep.Models.GameViewModel
+<body>
+    <partial name="Razorpages/Sidebar" />
+    <main>
+        <!--   MAIN PREFERENCES INFORMATION   -->
+        <div class="Container gameContainer managementContainer">
+            <div class="gameInformation">
+                <h1> Game Overview </h1><br /><br />
+                <table>
+                    <tr>
+                        <td>Amount of Players </td>
+                        <td> @Model.playerList.Count</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--   PREFERENCES SELECTION  -->
+        <div class="Container gameContainer selectionContainer">
+            <div class="gameSelection">
+                <h1> Players </h1><br /><br />
+                <ul id="ulpref">
+                    @foreach (var player in Model.playerList)
+                    {
+                        <li id="@player.Id">
+                            <label class="playerId">@player.Id - </label>
+                            <label class="playerId">@player.Username</label>
+
+                            <label class="playerPoints">10 Points</label>
+
+                            <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
+
+                            <button onclick="PlayerKnock(this)"class="playerKnockButton" value="@player.Id" >Knock</button>
+
+                            <hr />
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <button id="btn3" asp-action="Game/CreateGame" class="savePlayerButton">
+                Stop Game
+            </button>
+        </div>
+
+        <script>
+            function PlayerWin(btn) {               
+                $.ajax({
+                    url: '/Game/PlayerWonRound',
+                    data: { data: $(btn).val() },
+                    type: "POST",
+                })
+            }
+
+            function PlayerKnock(btn) {
+                $.ajax({
+                    url: '/Game/PlayerKnocks',
+                    data: { data: $(btn).val() },
+                    type: "POST",
+                })
+            }
+        </script>
+    </main>
+</body>
+
+@section Stylesheets{
+    <link rel="stylesheet" href="~/css/Game.css" />
+}
+@section Scripts{
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="~/js/Game.js"></script>
+    <script src="~/js/Dropdown.js"></script>
+    <script src="~/js/Sidebar.js"></script>
+}

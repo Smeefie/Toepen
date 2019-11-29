@@ -58,23 +58,26 @@
 
             function SendList() {
                 var dataStream = '';
+                var dataStreamLen = 0;
                 var liTag = document.getElementsByTagName("li");
                 for (var i = 0; i < liTag.length; i++) {
                     if (liTag[i].parentNode.id == 'playerListId') {
                         dataStream += liTag[i].id + ";";
+                        dataStreamLen++;
                     }
                 }
 
-                $.ajax({
-                    url: '/Game/StartGame',
-                    data: {
-                        'dataStream': dataStream
-                    },
-                    type: "POST",
-                    succes: function () {
-                        alert('Added');
-                    }
-                });
+                if (dataStreamLen >= 1) {
+                    $.ajax({
+                        url: '/Game/StartGame',
+                        data: { dataStream: dataStream },
+                        type: "POST",
+                    }).done(function (url) {
+                        window.location.href = url.newUrl;
+                    }).fail(function (xhr, a, error) {
+                        console.log(error);
+                    }); 
+                }                          
             }
         </script>
     </main>

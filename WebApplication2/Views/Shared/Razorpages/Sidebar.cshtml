@@ -7,20 +7,29 @@
     <nav class="sidebarMenu" tabindex="0">
         <div class="smartphone-menu-trigger"></div>
         <header class="avatar">
-            <img src="Images/logo.png" />
+            <img src="~/images/Logo.png" />
             <h2>Welcome</h2>
             @* Todo Find a way to use username from ID Claim *@
             @*<h1>@Model.Username</h1>*@
         </header>
         <ul>
-            <li tabindex="0" data-href="User" class="icon-user" id="active"> <span>Profile</span></li>
+            @*<li tabindex="0" data-href="User/Profile" class="icon-user" id="active"> <span>Profile</span></li>
             <hr />
-            <li tabindex="0" data-href="CreateGame" class="icon-toepen"> <span>Toepen</span></li>
+            <li tabindex="0" data-href="Game/CreateGame" class="icon-toepen"> <span>Toepen</span></li>
             <li tabindex="0" data-href="#" class="icon-host"> <span>Host Online</span></li>
             <li tabindex="0" data-href="#" class="icon-stats"> <span>Statistics</span></li>
             <hr />
             <li tabindex="0" data-href="#" class="icon-settings"> <span>Settings</span></li>
-            <li tabindex="0" data-href="logout" class="icon-logout"> <span>Logout</span></li>
+            <li tabindex="0" data-href="logout" class="icon-logout"> <span>Logout</span></li>*@
+            
+            <li tabindex="0" data-href="User" class="icon-user" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Profile" ? "active" : "")"> <a asp-controller="User" asp-action="Profile"> Profile </a></li>
+            <hr />
+            <li tabindex="0" class="icon-toepen" id="@(ViewContext.RouteData.Values["Action"].ToString() == "CreateGame" || ViewContext.RouteData.Values["Action"].ToString() == "GameRoom" ? "active" : "")"> <a asp-controller="Game" asp-action="CreateGame"> Toepen </a></li>
+            <li tabindex="0" class="icon-host" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Host" ? "active" : "")"> <a> Host Online </a></li>
+            <li tabindex="0" class="icon-stats" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Stats" ? "active" : "")"> <a> Statistics </a></li>
+            <hr />
+            <li tabindex="0" class="icon-settings" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Settings" ? "active" : "")"> <a> Settings </a></li>
+            <li tabindex="0" class="icon-logout"> <a asp-controller="Session" asp-action="Logout"> Logout </a></li>
         </ul>
     </nav>
 </body>

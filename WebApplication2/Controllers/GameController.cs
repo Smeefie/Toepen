@@ -3,31 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ASPToep.Models;
+using Logic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
 namespace ASPToep.Controllers
 {
+    [Authorize]
     public class GameController : Controller
     {
-        [Route("CreateGame")]
-        public IActionResult CreateGame()
+        GameLogic gameLogic = new GameLogic(false);
+
+        [Route("Game/CreateGame")]
+        public IActionResult CreateGame()   
         {
             return View();
         }
 
-        [Route("Game")]
-        public IActionResult Game(GameViewModel gameViewModel)
-        {
-            return View();
-        }
-
-        // todo figure out why 'return View' doesnt work
-        public IActionResult StartGame(string dataStream)
+        [Route("Game/GameRoom")]
+        public IActionResult GameRoom(string Datastream)
         {
             GameViewModel gameViewModel = new GameViewModel();
-            gameViewModel.AddPlayer(new Player(1, "Smeef"));
-            return View("Game", gameViewModel);
+            string[] datastream = Datastream.Split(';');
+            foreach(var id in datastream)
+            {
+                if(Int32.TryParse(id, out int num))
+                    gameViewModel.playerList.Add(new Player(Convert.ToInt32(id), "Smeef"));
+            }
+            //gameViewModel.playerList.Add(new Player(1, "Smeef"));
+            return View(gameViewModel);
+        }
+
+        // Todo: Figure out why 'return View' doesnt work
+        [HttpPost]
+        public JsonResult StartGame(string dataStream)
+        {
+            return Json(new { newUrl = Url.Action("GameRoom", "Game", new { DataStream = dataStream }) });
+        }
+
+        // GAME BUTTON EVENTS
+        public IActionResult PlayerWonRound(string playerId)
+        {
+            
+            return View();
+        }
+
+        public IActionResult PlayerKnocks(string playerId)
+        {
+            return View();
         }
     }
 }

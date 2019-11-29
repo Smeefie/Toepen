@@ -8,6 +8,7 @@ namespace ASPToep.Models
     public class GameViewModel
     {
         public List<Player> playerList;
+        public string DataStream;
 
         public GameViewModel()
         {
