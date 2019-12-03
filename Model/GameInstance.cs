@@ -1,23 +1,17 @@
-﻿using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.Text;
 
-namespace ASPToep.Models
+namespace Model
 {
-    public class GameViewModel
+    public class GameInstance
     {
         public List<Player> playerList;
         public string DataStream;
 
-        public GameViewModel()
+        public GameInstance()
         {
             playerList = new List<Player>();
-        }
-
-        public GameViewModel(GameInstance gameInstance)
-        {
-            playerList = gameInstance.playerList;
         }
 
         public void AddPlayer(Player player)

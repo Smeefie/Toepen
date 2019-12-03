@@ -6,5 +6,6 @@ namespace Logic.Interfaces
 {
     interface IGame
     {
+        void PlayerWonRound(int playerId);
     }
 }

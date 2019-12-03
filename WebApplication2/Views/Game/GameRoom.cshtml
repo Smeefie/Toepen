@@ -3,7 +3,7 @@
 <body>
     <partial name="Razorpages/Sidebar" />
     <main>
-        <!--   MAIN PREFERENCES INFORMATION   -->
+
         <div class="Container gameContainer managementContainer">
             <div class="gameInformation">
                 <h1> Game Overview </h1><br /><br />
@@ -15,7 +15,7 @@
                 </table>
             </div>
         </div>
-        <!--   PREFERENCES SELECTION  -->
+
         <div class="Container gameContainer selectionContainer">
             <div class="gameSelection">
                 <h1> Players </h1><br /><br />
@@ -23,10 +23,10 @@
                     @foreach (var player in Model.playerList)
                     {
                         <li id="@player.Id">
-                            <label class="playerId">@player.Id - </label>
-                            <label class="playerId">@player.Username</label>
-
-                            <label class="playerPoints">10 Points</label>
+                            <label id="id" class="playerId">@player.Id</label>
+                            <label id="username" class="playerId">@player.Username</label>
+                            <label id="knocked" class="playerId">@player.Knocked</label>
+                            <label id="score" class="playerPoints">@player.Score</label>
 
                             <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
 
@@ -44,18 +44,39 @@
         </div>
 
         <script>
-            function PlayerWin(btn) {               
+            //Todo Finish Ajax Method
+            function PlayerWin(btn) {
+                var playerList = [];
+
+                var liTag = document.getElementsByTagName("li");
+                for (var i = 0; i < liTag.length; i++) {
+                    if (liTag[i].parentNode.id == 'ulpref') {
+                        player = {};
+                        player.Id = parseInt(liTag[i].querySelector('#id').textContent);
+                        player.Username = liTag[i].querySelector('#username').textContent;
+                        player.Score = parseInt(liTag[i].querySelector('#score').textContent);
+                        player.Knocked = parseInt(liTag[i].querySelector('#knocked').textContent);
+
+                        playerList.push(player);
+                    }
+                }
+
                 $.ajax({
-                    url: '/Game/PlayerWonRound',
-                    data: { data: $(btn).val() },
                     type: "POST",
-                })
+                    url: '/Game/PlayerWonRound',
+                    data:
+                    {
+                        winPlayer: $(btn).val(),
+                        json: JSON.stringify({ 'list': playerList })
+                    },
+                });
+
             }
 
             function PlayerKnock(btn) {
                 $.ajax({
                     url: '/Game/PlayerKnocks',
-                    data: { data: $(btn).val() },
+                    data: { playerId: $(btn).val() },
                     type: "POST",
                 })
             }
