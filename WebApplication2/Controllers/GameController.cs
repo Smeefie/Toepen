@@ -33,11 +33,9 @@ namespace ASPToep.Controllers
                 if (Int32.TryParse(id, out int num))
                     gameModel.playerList.Add(new Player(Convert.ToInt32(id), "Smeef"));
             }
-            //gameViewModel.playerList.Add(new Player(1, "Smeef"));
             return View(new GameViewModel(gameModel));
         }
 
-        // Todo: Figure out why 'return View' doesnt work
         [HttpPost]
         public JsonResult StartGame(string dataStream)
         {
@@ -49,19 +47,19 @@ namespace ASPToep.Controllers
         public ActionResult PlayerWonRound(string winPlayer, string json)
         {
             List<Player> tempPlayerList = gameLogic.GetPlayerList(json);
-            
-            tempPlayerList.RemoveAll(i => i.Id == Convert.ToInt32(winPlayer));
+            gameModel.playerList = tempPlayerList;
 
             foreach (var player in tempPlayerList)
             {
-                player.Score += player.RoundPoints;
+                if(player.Id != Convert.ToInt32(winPlayer))
+                    player.Score += player.RoundPoints;
             }
 
             foreach (var player in gameModel.playerList)
             {
                 player.ResetRound();
             }
-            return View(new GameViewModel(gameModel));
+            return PartialView("Razorpages/GameContainer", gameModel);
         }
 
         [HttpPost]

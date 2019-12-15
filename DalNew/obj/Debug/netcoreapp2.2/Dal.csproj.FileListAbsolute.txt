@@ -24,5 +24,3 @@ C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.dll
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Debug\netcoreapp2.2\Dal.pdb
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Exceptions.dll
 C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Exceptions.pdb
-C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
-C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml

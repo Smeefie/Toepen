@@ -1,0 +1,20 @@
+﻿<div class="gameSelection">
+    <h1> Players </h1><br /><br />
+    <ul id="ulpref">
+        @foreach (var player in Model.playerList)
+        {
+            <li id="@player.Id">
+                <label id="id" class="playerId">@player.Id</label>
+                <label id="username" class="playerId">@player.Username</label>
+                <label id="knocked" class="playerId">@player.Knocked</label>
+                <label id="score" class="playerPoints">@player.Score</label>
+
+                <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
+
+                <button onclick="PlayerKnock(this)" class="playerKnockButton" value="@player.Id">Knock</button>
+
+                <hr />
+            </li>
+        }
+    </ul>
+</div>

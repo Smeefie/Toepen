@@ -82,3 +82,4 @@ C:\Users\Gebruiker\source\repos\ASPToep\WebApplication2\obj\Debug\netcoreapp2.2\
 C:\Users\Gebruiker\source\repos\ASPToep\WebApplication2\obj\Debug\netcoreapp2.2\ASPToep.pdb
 C:\Users\Gebruiker\source\repos\ASPToep\WebApplication2\obj\Debug\netcoreapp2.2\Razor\Views\Game\CreateGame.g.cshtml.cs
 C:\Users\Gebruiker\source\repos\ASPToep\WebApplication2\obj\Debug\netcoreapp2.2\Razor\Views\Game\GameRoom.g.cshtml.cs
+C:\Users\Gebruiker\source\repos\ASPToep\WebApplication2\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Razorpages\GameContainer.g.cshtml.cs

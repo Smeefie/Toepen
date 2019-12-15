@@ -22,5 +22,3 @@ C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\obj\Debug\netcoreapp2.2\Excep
 C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\obj\Debug\netcoreapp2.2\Exceptions.csproj.CopyComplete
 C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\obj\Debug\netcoreapp2.2\Exceptions.dll
 C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\obj\Debug\netcoreapp2.2\Exceptions.pdb
-C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
-C:\Users\Gebruiker\source\repos\ASPToep\Exceptions\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml

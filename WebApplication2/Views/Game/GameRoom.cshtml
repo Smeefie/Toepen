@@ -17,7 +17,7 @@
         </div>
 
         <div class="Container gameContainer selectionContainer">
-            <div class="gameSelection">
+            <div id="GameContainer" class="gameSelection">
                 <h1> Players </h1><br /><br />
                 <ul id="ulpref">
                     @foreach (var player in Model.playerList)
@@ -30,7 +30,7 @@
 
                             <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
 
-                            <button onclick="PlayerKnock(this)"class="playerKnockButton" value="@player.Id" >Knock</button>
+                            <button onclick="PlayerKnock(this)" class="playerKnockButton" value="@player.Id">Knock</button>
 
                             <hr />
                         </li>
@@ -44,42 +44,7 @@
         </div>
 
         <script>
-            //Todo Finish Ajax Method
-            function PlayerWin(btn) {
-                var playerList = [];
-
-                var liTag = document.getElementsByTagName("li");
-                for (var i = 0; i < liTag.length; i++) {
-                    if (liTag[i].parentNode.id == 'ulpref') {
-                        player = {};
-                        player.Id = parseInt(liTag[i].querySelector('#id').textContent);
-                        player.Username = liTag[i].querySelector('#username').textContent;
-                        player.Score = parseInt(liTag[i].querySelector('#score').textContent);
-                        player.Knocked = parseInt(liTag[i].querySelector('#knocked').textContent);
-
-                        playerList.push(player);
-                    }
-                }
-
-                $.ajax({
-                    type: "POST",
-                    url: '/Game/PlayerWonRound',
-                    data:
-                    {
-                        winPlayer: $(btn).val(),
-                        json: JSON.stringify({ 'list': playerList })
-                    },
-                });
-
-            }
-
-            function PlayerKnock(btn) {
-                $.ajax({
-                    url: '/Game/PlayerKnocks',
-                    data: { playerId: $(btn).val() },
-                    type: "POST",
-                })
-            }
+           
         </script>
     </main>
 </body>
@@ -87,9 +52,11 @@
 @section Stylesheets{
     <link rel="stylesheet" href="~/css/Game.css" />
 }
+
 @section Scripts{
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="~/js/Game.js"></script>
     <script src="~/js/Dropdown.js"></script>
     <script src="~/js/Sidebar.js"></script>
+    <script src="~/js/GameRoom.js"></script>
 }
