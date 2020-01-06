@@ -8,10 +8,14 @@ namespace Model
     {
         public List<Player> playerList;
         public string DataStream;
+        public int Round;
+        public int Limit;
 
         public GameInstance()
         {
             playerList = new List<Player>();
+            Round = 0;
+            Limit = 20;
         }
 
         public void AddPlayer(Player player)

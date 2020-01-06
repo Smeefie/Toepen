@@ -81,5 +81,18 @@ namespace Dal
             //throw new NotImplementedException();
         }
         #endregion
+
+        #region GAME
+        public List<User> GetAllUsers()
+        {
+            return memoryData;
+        }
+
+        public Player GetPlayerById(int id)
+        {
+            var user = memoryData.First(i => i.Id == id);
+            return new Player(user.Id, user.Username);
+        }
+        #endregion
     }
 }

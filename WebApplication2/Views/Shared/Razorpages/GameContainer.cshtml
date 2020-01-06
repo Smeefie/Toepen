@@ -1,20 +1,43 @@
-﻿<div class="gameSelection">
-    <h1> Players </h1><br /><br />
-    <ul id="ulpref">
-        @foreach (var player in Model.playerList)
-        {
-            <li id="@player.Id">
-                <label id="id" class="playerId">@player.Id</label>
-                <label id="username" class="playerId">@player.Username</label>
-                <label id="knocked" class="playerId">@player.Knocked</label>
-                <label id="score" class="playerPoints">@player.Score</label>
+﻿<div class="Container gameContainer managementContainer">
+    <div class="gameInformation">
+        <h1> Game Overview </h1><br /><br />
+        <table>
+            <tr>
+                <td>Amount of Players </td>
+                <td> @Model.playerList.Count</td>
+            </tr>
 
-                <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
+            <tr>
+                <td>Round</td>
+                <td id="roundCounter">@Model.Round</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
-                <button onclick="PlayerKnock(this)" class="playerKnockButton" value="@player.Id">Knock</button>
+<div class="Container gameContainer selectionContainer">
+    <div class="gameSelection">
+        <h1> Players </h1><br /><br />
+        <ul id="ulpref">
+            @foreach (var player in Model.playerList)
+            {
+                <li id="@player.Id">
+                    <label id="id" class="playerId">@player.Id</label>
+                    <label id="username" class="playerUsername">@player.Username</label>
+                    <label id="knocked" class="playerScore">@player.Knocked</label>
+                    <label id="score" class="playerPoints">@player.Score</label>
 
-                <hr />
-            </li>
-        }
-    </ul>
+                    <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
+
+                    <button onclick="PlayerKnock(this)" class="playerKnockButton" value="@player.Id">Knock</button>
+
+                    <hr />
+                </li>
+            }
+        </ul>
+    </div>
+
+    <button id="btn3" asp-action="Game/CreateGame" class="savePlayerButton">
+        Stop Game
+    </button>
 </div>

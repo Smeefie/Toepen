@@ -27,6 +27,16 @@ namespace Dal.SQL
             throw new NotImplementedException();
         }
 
+        public List<User> GetAllUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Player GetPlayerById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public User GetUserById(int id)
         {
             throw new NotImplementedException();

@@ -1,5 +1,6 @@
 ﻿using Model;
 using System;
+using System.Collections.Generic;
 
 namespace Dal
 {
@@ -23,5 +24,9 @@ namespace Dal
         User GetUserById(int id);
 
         User GetUserByName(string name);
+
+        //GAME
+        List<User> GetAllUsers();
+        Player GetPlayerById(int id);
     }
 }

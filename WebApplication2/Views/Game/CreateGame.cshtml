@@ -1,26 +1,27 @@
-﻿@model ASPToep.Models.GameViewModel
+﻿@model ASPToep.Models.CreateGameViewModel
 
 <body>
     <partial name="Razorpages/Sidebar" />
     <main>
-        <!--   MAIN PREFERENCES INFORMATION   -->
         <div class="Container gameContainer addPlayerContainer">
             <div class="addPlayersSub">
-                <h1> Add Players </h1><br /><br />
+                <h1> Create Game </h1><br /><br />
                 <div class="dropdown">
                     <div class="select">
                         <span id="playerSelect">Select Players</span>
                         <i class="fa fa-chevron-left"></i>
                     </div>
-                    <input type="hidden" name="player">
-                    <ul class="dropdown-menu">
-                        <li id="1">Player 1</li>
-                        <li id="2">Player 2</li>
-                        <li id="3">Player 3</li>
-                        <li id="4">Player 4</li>
-                        <li id="5">Player 5</li>
+                    <input type="hidden" id="valueField" name="player">
+                    <ul class="dropdown-menu" id="dropdownMenuId">
+                        <li id="nonClick"><input id="inputFilter" onkeyup="filterFunction()" /></li>
+                        @foreach (var user in Model.AllUsers)
+                        {
+                            <li id="@user.Id">@user.Username</li>
+                        }
                     </ul>
                 </div>
+
+                <input id="inputLimit" placeholder="Score Limit"/>
 
                 <button class="addPlayerButton" onclick="AddPlayerToList()">Add Player</button>
                 <button class="startGameButton" onclick="SendList()">Start Game</button>
@@ -56,7 +57,28 @@
                 }
             }
 
+            function filterFunction() {
+                var input, filter, ul, li, i;
+                input = document.getElementById("inputFilter");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("dropdownMenuId");
+                li = ul.getElementsByTagName("li");
+
+                for (i = 0; i < li.length; i++) {
+                    if (li[i].id != "nonClick") {
+                        txtValue = li[i].textContent || li[i].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+
             function SendList() {
+ 
+                var limit = document.getElementById("inputLimit").value;
                 var dataStream = '';
                 var dataStreamLen = 0;
                 var liTag = document.getElementsByTagName("li");
@@ -65,19 +87,22 @@
                         dataStream += liTag[i].id + ";";
                         dataStreamLen++;
                     }
-                }
+                }       
 
-                if (dataStreamLen >= 1) {
+                if (dataStreamLen > 1) {
                     $.ajax({
                         url: '/Game/StartGame',
-                        data: { dataStream: dataStream },
+                        data: {
+                            dataStream: dataStream,
+                            limit: limit
+                        },
                         type: "POST",
                     }).done(function (url) {
                         window.location.href = url.newUrl;
                     }).fail(function (xhr, a, error) {
                         console.log(error);
-                    }); 
-                }                          
+                    });
+                }
             }
         </script>
     </main>
@@ -89,7 +114,7 @@
 }
 @section Scripts{
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="~/js/Game.js"></script>
+    @*<script src="~/js/Game.js"></script>*@
     <script src="~/js/Dropdown.js"></script>
     <script src="~/js/Sidebar.js"></script>
 }

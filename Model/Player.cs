@@ -31,5 +31,10 @@ namespace Model
             RoundPoints = 1;
             Knocked = 0;
         }
+
+        public void CalculateScore()
+        {
+            Score += (1 + Knocked);
+        }
     }
 }

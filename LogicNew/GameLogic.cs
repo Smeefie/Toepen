@@ -25,6 +25,16 @@ namespace Logic
             }
         }
 
+        public List<User> GetAllUsers()
+        {
+            return Context.GetAllUsers();
+        }
+
+        public Player GetPlayerById(int id)
+        {
+            return Context.GetPlayerById(id);
+        }
+
         public void PlayerWonRound(int playerId)
         {
             

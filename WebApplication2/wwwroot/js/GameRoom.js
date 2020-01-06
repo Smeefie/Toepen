@@ -9,14 +9,14 @@ function PlayerWin(btn) {
         data:
         {
             winPlayer: $(btn).val(),
-            json: JSON.stringify({ 'list': playerList })
+            json: JSON.stringify({ 'list': playerList }),
+            roundCount: document.getElementById("roundCounter").innerHTML
         }
     }).done(function (partialViewResult) {
         $("#GameContainer").html(partialViewResult);
     }).fail(function (xhr, textStatus, errorThrown) {
         alert(xhr.responseText);
     });
-
 }
 
 function CreatePlayerList() {
@@ -39,9 +39,20 @@ function CreatePlayerList() {
 //======================================================================
 //Player knocking
 function PlayerKnock(btn) {
+    var playerList = CreatePlayerList();
+
     $.ajax({
-        url: '/Game/PlayerKnocks',
-        data: { playerId: $(btn).val() },
         type: "POST",
-    })
+        url: '/Game/PlayerKnocks',
+        data:
+        {
+            knockPlayer: $(btn).val(),
+            json: JSON.stringify({ 'list': playerList }),
+            roundCount: document.getElementById("roundCounter").innerHTML
+        }
+    }).done(function (partialViewResult) {
+        $("#GameContainer").html(partialViewResult);
+    }).fail(function (xhr, textStatus, errorThrown) {
+        alert(xhr.responseText);
+    });
 }
