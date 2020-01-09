@@ -54,6 +54,20 @@
     font-size: 14px;
 }
 
+.playerLost {
+    color: red;
+    font-size: 1.3em;
+    position: absolute;
+    left: 50%;
+}
+
+.playerWon {
+    color: green;
+    font-size: 1.3em;
+    position: absolute;
+    left: 50%;
+}
+
 .selectionContainer {
     height: auto;
     min-width: 90%;

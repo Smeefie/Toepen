@@ -2,6 +2,7 @@
 //Player winning
 function PlayerWin(btn) {
     var playerList = CreatePlayerList();
+    var jackCheck = $('#cbx').is(":checked");
 
     $.ajax({
         type: "POST",
@@ -10,7 +11,9 @@ function PlayerWin(btn) {
         {
             winPlayer: $(btn).val(),
             json: JSON.stringify({ 'list': playerList }),
-            roundCount: document.getElementById("roundCounter").innerHTML
+            scoreLimit: document.getElementById('scoreLimit').innerHTML,
+            roundCount: document.getElementById("roundCounter").innerHTML,
+            jack: jackCheck,
         }
     }).done(function (partialViewResult) {
         $("#GameContainer").html(partialViewResult);
@@ -29,6 +32,11 @@ function CreatePlayerList() {
             player.Username = liTag[i].querySelector('#username').textContent;
             player.Score = parseInt(liTag[i].querySelector('#score').textContent);
             player.Knocked = parseInt(liTag[i].querySelector('#knocked').textContent);
+            player.Won = parseInt(liTag[i].querySelector('#won').textContent);
+            player.Lost = parseInt(liTag[i].querySelector('#lost').textContent);
+
+            if (parseInt(liTag[i].querySelector('#won').textContent) != 0) player.Won = 1;
+            if (parseInt(liTag[i].querySelector('#lost').textContent) != 0) player.Lost = 1;
 
             playerList.push(player);
         }
@@ -48,6 +56,7 @@ function PlayerKnock(btn) {
         {
             knockPlayer: $(btn).val(),
             json: JSON.stringify({ 'list': playerList }),
+            limit: document.getElementById('scoreLimit').innerHTML,
             roundCount: document.getElementById("roundCounter").innerHTML
         }
     }).done(function (partialViewResult) {

@@ -40,6 +40,25 @@ namespace Logic
             
         }
 
+        public List<Player> CheckWinner(List<Player> tempPlayerList)
+        {
+            int lostCount = 0;
+            foreach (var player in tempPlayerList) if (player.Lost) lostCount++;
+
+            if (lostCount == tempPlayerList.Count - 1)
+            {
+                foreach (var loser in tempPlayerList)
+                {
+                    if (!loser.Lost)
+                    {
+                        loser.Won = true;
+                    }
+                }
+            }
+
+            return tempPlayerList;
+        }
+
         public List<Player> GetPlayerList(string json)
         {
             var listObect = JToken.Parse(json);
@@ -56,6 +75,8 @@ namespace Logic
                 {
                     Score = (int)itemProperties.FirstOrDefault(x => x.Name == "Score").Value,
                     Knocked = (int)itemProperties.FirstOrDefault(x => x.Name == "Knocked").Value,
+                    Won = (bool)itemProperties.FirstOrDefault(x => x.Name == "Won").Value,
+                    Lost = (bool)itemProperties.FirstOrDefault(x => x.Name == "Lost").Value,
                 };
 
                 tempPlayerList.Add(tempPlayer);

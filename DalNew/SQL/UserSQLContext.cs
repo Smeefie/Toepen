@@ -1,4 +1,5 @@
 ﻿using Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +8,8 @@ namespace Dal.SQL
 {
     public class UserSQLContext : IUserDal
     {
+        MySqlConnection conn;
+        private readonly string ConnectionString = "Server=studmysql01.fhict.local;Uid=dbi409505;Database=dbi409505;Pwd=qhwr68tb2;";
         public UserSQLContext()
         {
 
@@ -14,6 +17,16 @@ namespace Dal.SQL
 
         public bool CheckEmailExists(string email)
         {
+            //try
+            //{
+            //    conn = new MySqlConnection();
+            //    conn.ConnectionString = ConnectionString;
+            //    conn.Open();
+            //}
+            //catch (MySql.Data.MySqlClient.MySqlException ex)
+            //{
+            //    //ERROR
+            //}
             throw new NotImplementedException();
         }
 

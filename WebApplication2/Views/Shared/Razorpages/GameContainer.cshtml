@@ -11,6 +11,11 @@
                 <td>Round</td>
                 <td id="roundCounter">@Model.Round</td>
             </tr>
+
+            <tr>
+                <td>Score Limit</td>
+                <td id="scoreLimit">@Model.Limit</td>
+            </tr>
         </table>
     </div>
 </div>
@@ -18,21 +23,58 @@
 <div class="Container gameContainer selectionContainer">
     <div class="gameSelection">
         <h1> Players </h1><br /><br />
+        <div class="Checkbox">
+            <input id="cbx" type="checkbox" />
+            <label class="cbx" for="cbx">
+                <div class="flip">
+                    <div class="front"></div>
+                    <div class="back">
+                        <svg width="16" height="14" viewBox="0 0 16 14">
+                            <path d="M2 8.5L6 12.5L14 1.5"></path>
+                        </svg>
+                    </div>
+                </div>
+            </label>
+            <span>Jack</span>
+        </div>
+
         <ul id="ulpref">
             @foreach (var player in Model.playerList)
             {
-                <li id="@player.Id">
-                    <label id="id" class="playerId">@player.Id</label>
-                    <label id="username" class="playerUsername">@player.Username</label>
-                    <label id="knocked" class="playerScore">@player.Knocked</label>
-                    <label id="score" class="playerPoints">@player.Score</label>
+            <li id="@player.Id">
+                <label id="id" class="playerId">@player.Id</label>
+                <label id="username" class="playerUsername">@player.Username</label>
+                <label id="knocked" class="playerScore">@player.Knocked</label>
+                <label id="score" class="playerPoints">@player.Score</label>
 
+                @if (player.Lost)
+                {
+                    <label id="lost" value="1" class="playerLost">ELIMINATED</label>
+                }
+                else
+                {
+                    <label id="lost" style="display:none">0</label>
+                }
+
+                @if (player.Won)
+                {
+                    <label id="won" value="1" class="playerWon">WINNER</label>
+                }
+                else
+                {
+                    <label id="won" style="display:none">0</label>
+                }
+
+                @if (!player.Won && !player.Lost)
+                {
                     <button onclick="PlayerWin(this)" value="@player.Id" class="playerWonButton">Winner</button>
 
                     <button onclick="PlayerKnock(this)" class="playerKnockButton" value="@player.Id">Knock</button>
+                }
 
-                    <hr />
-                </li>
+                <hr />
+            </li>
+                        
             }
         </ul>
     </div>

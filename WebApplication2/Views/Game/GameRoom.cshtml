@@ -4,7 +4,8 @@
     <partial name="Razorpages/Sidebar" />
     <main>
         <div id="GameContainer">
-            <div class="Container gameContainer managementContainer">
+            <partial name="Razorpages/GameContainer" />
+            @*<div class="Container gameContainer managementContainer">
                 <div class="gameInformation">
                     <h1> Game Overview </h1><br /><br />
                     <table>
@@ -51,7 +52,7 @@
                 <button id="btn3" asp-action="Game/CreateGame" class="savePlayerButton">
                     Stop Game
                 </button>
-            </div>
+            </div>*@
         </div>
 
         <script>
@@ -62,6 +63,7 @@
 
 @section Stylesheets{
     <link rel="stylesheet" href="~/css/Game.css" />
+    <link rel="stylesheet" href="~/css/Checkbox.css" />
 }
 
 @section Scripts{

@@ -50,34 +50,41 @@ namespace ASPToep.Controllers
 
         // GAME BUTTON EVENTS
         [HttpPost]
-        public ActionResult PlayerWonRound(string winPlayer, string json, string roundCount)
+        public ActionResult PlayerWonRound(string winPlayer, string json, string scoreLimit, string roundCount, string jack, string blind)
         {
-            List<Player> tempPlayerList = gameLogic.GetPlayerList(json);
-            gameModel.playerList = tempPlayerList;
-            gameModel.Round = Convert.ToInt32(roundCount) + 1;
+            List<Player> tempPlayerList = GetGameViewModel(json, (Convert.ToInt32(roundCount) + 1).ToString(), scoreLimit);
 
             foreach (var player in tempPlayerList)
             {
                 if (player.Id != Convert.ToInt32(winPlayer))
-                    player.CalculateScore();
+                {
+                    player.CalculateScore(Convert.ToBoolean(jack), gameModel.Limit);
+                }              
             }
 
-            foreach (var player in gameModel.playerList)
-            {
-                player.ResetRound();
-            }
+            gameModel.playerList = gameLogic.CheckWinner(tempPlayerList);
+
+
+            foreach (var player in gameModel.playerList) player.ResetRound();
+            return PartialView("Razorpages/GameContainer", gameModel);
+        }      
+
+        [HttpPost]
+        public IActionResult PlayerKnocks(string knockPlayer, string json, string scoreLimit, string roundCount)
+        {
+            List<Player> tempPlayerList = GetGameViewModel(json, roundCount, scoreLimit);
+            tempPlayerList.First(i => i.Id == Convert.ToInt32(knockPlayer)).Knocked++;
             return PartialView("Razorpages/GameContainer", gameModel);
         }
 
-        [HttpPost]
-        public IActionResult PlayerKnocks(string knockPlayer, string json, string roundCount)
+        //GET THE VIEWMODEL
+        private List<Player> GetGameViewModel(string json, string roundCount, string scoreLimit)
         {
             List<Player> tempPlayerList = gameLogic.GetPlayerList(json);
             gameModel.playerList = tempPlayerList;
             gameModel.Round = Convert.ToInt32(roundCount);
-
-            tempPlayerList.First(i => i.Id == Convert.ToInt32(knockPlayer)).Knocked++;
-            return PartialView("Razorpages/GameContainer", gameModel);
+            gameModel.Limit = Convert.ToInt32(scoreLimit);
+            return tempPlayerList;
         }
     }
 }
