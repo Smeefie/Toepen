@@ -10,7 +10,6 @@ namespace Dal.SQL
     {
         MySqlConnection conn;
         MySqlCommand command;
-        string query;
         private readonly string ConnectionString = "Server=studmysql01.fhict.local;Uid=dbi409505;Database=dbi409505;Pwd=qhwr68tb2;";
         public UserSQLContext()
         {
@@ -240,5 +239,83 @@ namespace Dal.SQL
 
             return validated == -1 ? false : true;
         }
+
+        #region STATISTICS
+        public void UpdateStatistics(int id, bool won)
+        {
+            if(HasStatistics(id))
+            {
+                int played, wins;
+                GetStatisticsById(id, out played, out wins);
+
+                command = new MySqlCommand("UpdateStatistics", conn)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
+                command.Parameters.Add(new MySqlParameter("updateId", id));
+                command.Parameters.Add(new MySqlParameter("updatePlayed", played + 1));
+                command.Parameters.Add(new MySqlParameter("updateWins", won ? wins + 1 : wins));
+
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            else
+            {
+                command = new MySqlCommand("CreateStatistics", conn)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
+                command.Parameters.Add(new MySqlParameter("played", 1));
+                command.Parameters.Add(new MySqlParameter("wins", won ? 1 : 0));
+
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        private void GetStatisticsById(int id, out int played, out int wins)
+        {
+            played = 0;
+            wins = 0;
+            command = new MySqlCommand("GetStatisticsById", conn)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+            command.Parameters.Add(new MySqlParameter("statId", id));
+
+            conn.Open();
+            command.ExecuteNonQuery();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                played = reader.GetInt32(1);
+                wins = reader.GetInt32(2);
+            }
+            conn.Close();
+        }
+
+        private bool HasStatistics(int id)
+        {
+            int exists = -1;
+            command = new MySqlCommand("GetStatisticsById", conn)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+            command.Parameters.Add(new MySqlParameter("statid", id));
+
+            conn.Open();
+            command.ExecuteNonQuery();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                exists = reader.GetInt32(0);
+            }
+            conn.Close();
+
+            return exists == -1 ? false : true;
+        }
+        #endregion
     }
 }

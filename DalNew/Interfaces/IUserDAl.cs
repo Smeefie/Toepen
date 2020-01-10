@@ -28,5 +28,6 @@ namespace Dal
         //GAME
         List<User> GetAllUsers();
         Player GetPlayerById(int id);
+        void UpdateStatistics(int id, bool won);
     }
 }

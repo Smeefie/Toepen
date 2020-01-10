@@ -93,6 +93,11 @@ namespace Dal
             var user = memoryData.First(i => i.Id == id);
             return new Player(user.Id, user.Username);
         }
+
+        public void UpdateStatistics(int id, bool won)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

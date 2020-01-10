@@ -52,11 +52,20 @@ namespace Logic
                     if (!loser.Lost)
                     {
                         loser.Won = true;
+                        UpdateStatistics(tempPlayerList);
                     }
                 }
             }
 
             return tempPlayerList;
+        }
+
+        private void UpdateStatistics(List<Player> playerList)
+        {
+            foreach(var player in playerList)
+            {
+                Context.UpdateStatistics(player.Id, player.Won);
+            }
         }
 
         public List<Player> GetPlayerList(string json)
