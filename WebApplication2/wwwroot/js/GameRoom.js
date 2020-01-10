@@ -56,7 +56,7 @@ function PlayerKnock(btn) {
         {
             knockPlayer: $(btn).val(),
             json: JSON.stringify({ 'list': playerList }),
-            limit: document.getElementById('scoreLimit').innerHTML,
+            scoreLimit: document.getElementById('scoreLimit').innerHTML,
             roundCount: document.getElementById("roundCounter").innerHTML
         }
     }).done(function (partialViewResult) {

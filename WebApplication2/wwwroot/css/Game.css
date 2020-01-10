@@ -54,6 +54,35 @@
     font-size: 14px;
 }
 
+.newPlayerButton {
+    outline: 0;
+    text-decoration: none;
+    background: #333;
+    border: 0;
+    padding: 3px 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: .2s;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    right: 15px;
+    right: 15px;
+    margin-top: 7px;
+}
+
+    .newPlayerButton:hover {
+        background: #555;
+        transition: .2s;
+    }
+
 .playerLost {
     color: red;
     font-size: 1.3em;

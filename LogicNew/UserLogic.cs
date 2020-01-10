@@ -55,9 +55,9 @@ namespace Logic
         public void Register(User registerUser)
         {
             Error errorObject = new Error();
-            if (!Context.CheckEmailExists(registerUser.Email)) errorObject.AddErrorMessage("Email", "Email already exists");
+            if (Context.CheckEmailExists(registerUser.Email)) errorObject.AddErrorMessage("Email", "Email already exists");
 
-            if (!Context.CheckUsernameExists(registerUser.Username)) errorObject.AddErrorMessage("Username", "Username already exists");
+            if (Context.CheckUsernameExists(registerUser.Username)) errorObject.AddErrorMessage("Username", "Username already exists");
 
             if (errorObject.GetErrorState() > 0) throw new RegisterException("Register failed", errorObject);
 

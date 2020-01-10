@@ -19,10 +19,11 @@ namespace ASPToep.Controllers
     public class UserController : Controller
     {
         //LOAD THE PAGE
-        private IUser userLogic = new UserLogic(false);
+        private IUser userLogic = new UserLogic(true);
         public IActionResult Profile()
         {
             //INITIALIZE THE VIEWMODEL 
+            if (userLogic.GetUserByName(HttpContext.User.Identity.Name) == null) return RedirectToAction("Login", "Session");
             User tempUser = userLogic.GetUserByName(HttpContext.User.Identity.Name);
 
             //CONVERT USER TO PROFILEVIEWMODEL

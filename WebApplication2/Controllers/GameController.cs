@@ -16,7 +16,7 @@ namespace ASPToep.Controllers
     [Authorize]
     public class GameController : Controller
     {
-        GameLogic gameLogic = new GameLogic(false);
+        GameLogic gameLogic = new GameLogic(true);
         GameInstance gameModel = new GameInstance();
 
         [Route("Game/CreateGame")]

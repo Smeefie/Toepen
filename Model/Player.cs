@@ -10,9 +10,9 @@ namespace Model
     {
         //TODO Check if JsonProperty works
         //[JsonProperty("Id")]
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
-        public string Username { get; private set; }
+        public string Username { get; set; }
         public int Score { get; set; }
         public int RoundPoints { get; set; }
         public int Knocked { get; set; }
@@ -23,8 +23,18 @@ namespace Model
         {
             this.Id = Id;
             this.Username = Username;
-            this.Score = 0;
-            this.RoundPoints = 1;
+            Score = 0;
+            RoundPoints = 1;
+            Knocked = 0;
+            Lost = false;
+            Won = false;
+        }
+
+        public Player()
+        {
+            Id = -1;
+            Score = 0;
+            RoundPoints = 1;
             Knocked = 0;
             Lost = false;
             Won = false;

@@ -5,12 +5,12 @@ namespace Model
 
     public class User
     {
-        public int Id { get; private set; }
-        public string Username { get; private set; }
-        public string Firstname { get; private set; }
-        public string Lastname { get; private set; }
-        public string Password { get; private set; }
-        public string Email { get; private set; }
+        public int Id { get;  set; }
+        public string Username { get;  set; }
+        public string Firstname { get;  set; }
+        public string Lastname { get;  set; }
+        public string Password { get;  set; }
+        public string Email { get;  set; }
 
         //0 - user
         //1 - admin
@@ -37,7 +37,7 @@ namespace Model
 
         public User()
         {
-            
+            Id = -1;
         }
 
 
@@ -67,10 +67,10 @@ namespace Model
             Lastname = lastname;
         }
 
-        public void UpdateUserInfo(string username, string lastname, string password)
+        public void UpdateUserInfo(string username, string firstname, string lastname)
         {
             Username = username;
-            Firstname = Firstname;
+            Firstname = firstname;
             Lastname = lastname;
         }
         #endregion

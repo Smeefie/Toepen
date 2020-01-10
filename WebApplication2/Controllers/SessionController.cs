@@ -18,7 +18,7 @@ namespace ASPToep.Controllers
 {
     public class SessionController : Controller
     {
-        private ISession userLogic = new UserLogic(false);
+        private ISession userLogic = new UserLogic(true);
 
         #region LOGIN + LOGOUT
         [Route("login")]
