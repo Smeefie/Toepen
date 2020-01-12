@@ -20,5 +20,6 @@ namespace Logic.Interfaces
         User GetUserById(int id);
 
         User GetUserByName(string username);
+        List<Stat> GetAllStats();
     }
 }

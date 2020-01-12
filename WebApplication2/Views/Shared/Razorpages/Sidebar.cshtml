@@ -26,7 +26,7 @@
             <hr />
             <li tabindex="0" class="icon-toepen" id="@(ViewContext.RouteData.Values["Action"].ToString() == "CreateGame" || ViewContext.RouteData.Values["Action"].ToString() == "GameRoom" ? "active" : "")"> <a asp-controller="Game" asp-action="CreateGame"> Toepen </a></li>
             <li tabindex="0" class="icon-host" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Host" ? "active" : "")"> <a> Host Online </a></li>
-            <li tabindex="0" class="icon-stats" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Stats" ? "active" : "")"> <a> Statistics </a></li>
+            <li tabindex="0" class="icon-stats" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Statistics" ? "active" : "")"> <a asp-controller="User" asp-action="Statistics"> Statistics </a></li>
             <hr />
             <li tabindex="0" class="icon-settings" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Settings" ? "active" : "")"> <a> Settings </a></li>
             <li tabindex="0" class="icon-logout"> <a asp-controller="Session" asp-action="Logout"> Logout </a></li>

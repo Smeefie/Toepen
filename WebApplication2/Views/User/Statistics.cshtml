@@ -1,0 +1,80 @@
+﻿@model ASPToep.Models.StatisticsViewModel
+
+<html>
+
+<body>
+    <partial name="Razorpages/Sidebar" />
+
+    <main>
+        <!--  MAIN PROFILE INFORMATION  -->
+        <div class="Container statisticsContainer">
+            <h1>My Statistics</h1>
+
+            @if (Model.StatList.Count(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)) > 0)
+            {
+                <table>
+                    <tr>
+                        <td>Games Played</td>
+                        <td> @Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Played</td>
+                    </tr>
+
+                    <tr>
+                        <td>Games Won</td>
+                        <td> @Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Wins</td>
+                    </tr>
+                    <tr>
+                        <td>Win Percentage</td>
+                        <td> @((float)Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Wins / Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Played * 100) %</td>
+                    </tr>
+                </table>
+            }
+            else
+            {
+                <p>You must play atleast one game to get statistics.</p>
+            }
+        </div>
+
+        <div class="Container leaderboardContainer">
+            <h1>Leaderboards</h1>
+
+            <table class="winnersTable">
+                <tr>
+                    <th>Top Games won</th>
+                </tr>
+                @foreach (var stat in Model.StatList)
+                {
+                    <tr>
+                        <td>@stat.uName</td>
+                        <td>@stat.Wins</td>
+                    </tr>
+                }
+            </table>
+
+            <table class="playerTable">
+                <tr>
+                    <th>Top Games Played</th>
+                </tr>
+                @foreach (var stat in Model.StatList)
+                {
+                    <tr>
+                        <td>@stat.uName</td>
+                        <td>@stat.Played</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
+
+@section Stylesheets{
+    <link rel="stylesheet" href="~/css/Main.css" />
+    <link rel="stylesheet" href="~/css/Statistics.css" />
+    <link rel="stylesheet" href="~/css/Sidebar.css" />
+}
+
+@section scripts{
+    <script src="~/js/Sidebar.js"></script>
+    <script src="~/js/Profile.js"></script>
+}

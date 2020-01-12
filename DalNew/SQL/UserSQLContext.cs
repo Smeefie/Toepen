@@ -317,5 +317,33 @@ namespace Dal.SQL
             return exists == -1 ? false : true;
         }
         #endregion
+
+        public List<Stat> GetAllStats()
+        {
+            List<Stat> statList = new List<Stat>();
+            command = new MySqlCommand("GetAllStatistics", conn)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+
+            conn.Open();
+            command.ExecuteNonQuery();
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Stat stat = new Stat()
+                {
+                    uName = reader.GetString(0),
+                    Id = reader.GetInt32(1),
+                    Played = reader.GetInt32(2),
+                    Wins = reader.GetInt32(3)
+                };
+
+                statList.Add(stat);
+            }
+            conn.Close();
+
+            return statList;
+        }
     }
 }

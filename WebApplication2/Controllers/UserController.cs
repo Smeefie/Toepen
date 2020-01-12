@@ -37,6 +37,16 @@ namespace ASPToep.Controllers
             return View(tempUserVM);
         }
 
+        public IActionResult Statistics()
+        {
+            StatisticsViewModel statisticsViewModel = new StatisticsViewModel()
+            {
+                StatList = userLogic.GetAllStats()
+            };
+           
+            return View(statisticsViewModel);
+        }
+
         //UPDATE THE USER
         [HttpPost]
         public IActionResult Profile(ProfileViewModel user)

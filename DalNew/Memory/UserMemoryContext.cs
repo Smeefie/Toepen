@@ -98,6 +98,11 @@ namespace Dal
         {
             throw new NotImplementedException();
         }
+
+        public List<Stat> GetAllStats()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

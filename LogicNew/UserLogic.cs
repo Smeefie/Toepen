@@ -114,5 +114,10 @@ namespace Logic
         }
         #endregion
 
+        public List<Stat> GetAllStats()
+        {
+            return Context.GetAllStats();
+        }
+
     }
 }
