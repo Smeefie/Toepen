@@ -1,0 +1,88 @@
+﻿@model ASPToep.Models.FriendViewModel
+@{
+    ViewData["Title"] = "Friends";
+}
+
+<partial name="Razor/Navigation" />
+<body>
+    <div class="Container groupContainer">
+        <div class="groupName">
+            Friends
+        </div>
+
+        <div class="groupInformation">
+            <span class="groupHeader">Current Friends<br /></span>
+            <ul id="friendsPartial">
+                @foreach (var item in Model.userList)
+                {
+                    if (item != null)
+                    {
+                        <li>
+                            <label>@item.Username</label>
+                            <label onclick="DeleteFriend('@item.Id')" class="friendDeleteButton">Delete</label>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+
+        <div class="teamForm" style="display:inherit">
+            <div>
+                <input id="FriendToAdd" autocomplete="off" placeholder="Name" />
+                <button onclick="ValidateFriend()">Add</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+    function AddFriend() {
+        var friend = document.getElementById("FriendToAdd").value;
+        $.ajax({
+            type: "Post",
+            url: '/User/AddFriend',
+            data: {
+                'friend': friend,
+            }
+        }).done(function (partialViewResult) {
+            $("#friendsPartial").html(partialViewResult);
+        });
+    }
+
+    function ValidateFriend() {
+        var friend = document.getElementById("FriendToAdd").value;
+        $.ajax({
+            type: "Get",
+            url: '/User/ValidateFriend',
+            data: {
+                'friend': friend,
+            },
+            success: function (response) {
+                if (response) {
+                    AddFriend();
+                }
+                else {
+                    alert('Friend could not be added...');
+                }
+            }
+        });
+    }
+
+    function DeleteFriend(item) {
+        $.ajax({
+            type: "Post",
+            url: '/User/DeleteFriend',
+            data: {
+                'friend': item,
+            }
+        }).done(function (partialViewResult) {
+            $("#friendsPartial").html(partialViewResult);
+        });
+    }
+
+</script>
+
+@section Stylesheets{
+    <link rel="stylesheet" href="~/css/Groups.css" />
+}
+

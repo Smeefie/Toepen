@@ -64,7 +64,6 @@ namespace ASPToep.Controllers
 
             gameModel.playerList = gameLogic.CheckWinner(tempPlayerList);
 
-
             foreach (var player in gameModel.playerList) player.ResetRound();
             return PartialView("Razorpages/GameContainer", gameModel);
         }      

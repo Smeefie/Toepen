@@ -40,7 +40,6 @@ namespace Logic
         }
 
         //VALIDATE USER LOGIN CREDENTIALS - ISession, IUser
-        /// <exception cref="ValidateException"></exception>
         public void ValidateLogin(User loginUser)
         {
             bool valid = Context.ValidateLogin(loginUser);

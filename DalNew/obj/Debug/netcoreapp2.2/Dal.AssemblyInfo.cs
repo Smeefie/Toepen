@@ -11,6 +11,8 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exceptions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Exceptions", "Exceptions.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Gebruiker\\source\\repos\\ASPToep\\Model", "Model.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -1,0 +1,10 @@
+﻿@foreach (var item in Model)
+{
+    if (item != null)
+    {
+        <li>
+            <label>@item.Name</label>
+            <label onclick="DeleteFriend('@item.Id')" class="friendDeleteButton">Delete</label>
+        </li>
+    }
+}

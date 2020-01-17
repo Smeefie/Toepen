@@ -24,7 +24,7 @@
                     </tr>
                     <tr>
                         <td>Win Percentage</td>
-                        <td> @((float)Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Wins / Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Played * 100) %</td>
+                        <td> @(Math.Round((float)Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Wins / Model.StatList.Single(i => i.Id == Convert.ToInt32(User.Claims.Single(u => u.Type == "id").Value)).Played * 100, 2)) %</td>
                     </tr>
                 </table>
             }
@@ -41,7 +41,7 @@
                 <tr>
                     <th>Top Games won</th>
                 </tr>
-                @foreach (var stat in Model.StatList)
+                @foreach (var stat in Model.StatList.Take(9))
                 {
                     <tr>
                         <td>@stat.uName</td>
@@ -54,7 +54,7 @@
                 <tr>
                     <th>Top Games Played</th>
                 </tr>
-                @foreach (var stat in Model.StatList)
+                @foreach (var stat in Model.StatList.Take(9))
                 {
                     <tr>
                         <td>@stat.uName</td>

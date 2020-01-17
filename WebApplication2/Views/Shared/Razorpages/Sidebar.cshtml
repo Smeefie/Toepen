@@ -23,6 +23,7 @@
             <li tabindex="0" data-href="logout" class="icon-logout"> <span>Logout</span></li>*@
             
             <li tabindex="0" data-href="User" class="icon-user" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Profile" ? "active" : "")"> <a asp-controller="User" asp-action="Profile"> Profile </a></li>
+            <li tabindex="0" data-href="Friends" class="icon-friends" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Friends" ? "active" : "")"> <a asp-controller="User" asp-action="Friends"> Friends </a></li>
             <hr />
             <li tabindex="0" class="icon-toepen" id="@(ViewContext.RouteData.Values["Action"].ToString() == "CreateGame" || ViewContext.RouteData.Values["Action"].ToString() == "GameRoom" ? "active" : "")"> <a asp-controller="Game" asp-action="CreateGame"> Toepen </a></li>
             <li tabindex="0" class="icon-host" id="@(ViewContext.RouteData.Values["Action"].ToString() == "Host" ? "active" : "")"> <a> Host Online </a></li>

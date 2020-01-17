@@ -37,6 +37,7 @@ namespace ASPToep.Controllers
             return View(tempUserVM);
         }
 
+        [Route("User/Statistics")]
         public IActionResult Statistics()
         {
             StatisticsViewModel statisticsViewModel = new StatisticsViewModel()
@@ -75,5 +76,36 @@ namespace ASPToep.Controllers
             userLogic.UpdateUser(currentUser.Id, newUser);
             return View(user);
         }
+
+        #region FRIENDS - OUTSIDE OF SCOPE FOR NOW
+        //public IActionResult AddFriend(string friend)
+        //{
+        //    userLogic.AddFriend(int.Parse(User.Claims.Single(i => i.Type == "Id").Value), friend);
+
+        //    int id = int.Parse(User.Claims.Single(i => i.Type == "Id").Value);
+        //    var friends = new List<FriendViewModel>();
+        //    var friendlist = userLogic.GetFriends(id);
+        //    if (friendlist.Count() > 0) friendlist.ToList().ForEach(x => friends.Add(new User(x.Username, x.id)));
+
+        //    return PartialView("Razor/FriendsPartial", friends.ToArray());
+        //}
+
+        //public IActionResult DeleteFriend(string friend)
+        //{
+        //    userLogic.DeleteFriend(int.Parse(User.Claims.Single(i => i.Type == "Id").Value), int.Parse(friend));
+
+        //    int id = int.Parse(User.Claims.Single(i => i.Type == "Id").Value);
+        //    var friends = new List<FriendViewModel>();
+        //    var friendlist = userLogic.GetFriends(id);
+        //    if (friendlist.Count() > 0) friendlist.ToList().ForEach(x => friends.Add(new FriendViewModel(x.Username, x.id)));
+
+        //    return PartialView("Razor/FriendsPartial", friends.ToArray());
+        //}
+
+        //public JsonResult ValidateFriend(string friend)
+        //{
+        //    return Json(userLogic.ValidateFriend(int.Parse(User.Claims.Single(i => i.Type == "Id").Value), friend));
+        //}
+        #endregion
     }
 }

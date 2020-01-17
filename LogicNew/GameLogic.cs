@@ -68,6 +68,7 @@ namespace Logic
             }
         }
 
+        
         public List<Player> GetPlayerList(string json)
         {
             var listObect = JToken.Parse(json);

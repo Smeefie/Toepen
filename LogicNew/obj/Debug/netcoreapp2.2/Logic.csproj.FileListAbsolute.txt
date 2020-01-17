@@ -30,5 +30,5 @@ C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.A
 C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.csproj.CopyComplete
 C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.dll
 C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\obj\Debug\netcoreapp2.2\Logic.pdb
-C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
-C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Logic.runtimeconfig.json
+C:\Users\Gebruiker\source\repos\ASPToep\LogicNew\bin\Debug\netcoreapp2.2\Logic.runtimeconfig.dev.json

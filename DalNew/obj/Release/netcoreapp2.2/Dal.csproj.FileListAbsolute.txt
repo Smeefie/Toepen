@@ -1,0 +1,16 @@
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Dal.deps.json
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Dal.runtimeconfig.json
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Dal.runtimeconfig.dev.json
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Dal.dll
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Dal.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Exceptions.dll
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Model.dll
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Exceptions.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\bin\Release\netcoreapp2.2\Model.pdb
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.dll
+C:\Users\Gebruiker\source\repos\ASPToep\DalNew\obj\Release\netcoreapp2.2\Dal.pdb

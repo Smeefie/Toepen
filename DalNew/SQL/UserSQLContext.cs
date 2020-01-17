@@ -25,7 +25,15 @@ namespace Dal.SQL
             };
             command.Parameters.Add(new MySqlParameter("checkEmail", email));
 
-            conn.Open();
+            try
+            {
+                conn.Open();
+            }
+            catch(MySqlException e)
+            {
+
+            }
+            
             command.ExecuteNonQuery();
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
